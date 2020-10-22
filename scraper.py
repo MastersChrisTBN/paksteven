@@ -12,11 +12,12 @@ cy="\033[1;36m"
 
 def banner():
     print(f"""
-\__    ___/___ |  |   ____   ________________    _____    /   _____/ ________________  ______ ______   ___________ 
-  |    |_/ __ \|  | _/ __ \ / ___\_  __ \__  \  /     \   \_____  \_/ ___\_  __ \__  \ \____ \\____ \_/ __ \_  __ \
-  |    |\  ___/|  |_\  ___// /_/  >  | \// __ \|  Y Y  \  /        \  \___|  | \// __ \|  |_> >  |_> >  ___/|  | \/
-  |____| \___  >____/\___  >___  /|__|  (____  /__|_|  / /_______  /\___  >__|  (____  /   __/|   __/ \___  >__|   
-             \/          \/_____/            \/      \/          \/     \/           \/|__|   |__|        \/    
+Butuh Bantuan?
+Telegram: @paksteven
+
+
+
+
         """)
 
 cpass = configparser.RawConfigParser()
@@ -63,17 +64,17 @@ for chat in chats:
     except:
         continue
  
-print(gr+'[+] Choose a group to scrape members :'+re)
+print(gr+'[+] Pilih Grup untuk di scrape:'+re)
 i=0
 for g in groups:
     print(gr+'['+cy+str(i)+gr+']'+cy+' - '+ g.title)
     i+=1
  
 print('')
-g_index = input(gr+"[+] Enter a Number : "+re)
+g_index = input(gr+"[+] Masukan Nomor: "+re)
 target_group=groups[int(g_index)]
  
-print(gr+'[+] Fetching Members...')
+print(gr+'[+] Mencari Members...')
 time.sleep(1)
 all_participants = []
 all_participants = client.get_participants(target_group, aggressive=True)
