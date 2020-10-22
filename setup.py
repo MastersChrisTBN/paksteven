@@ -2,8 +2,8 @@
 
 
 """
-you can re run setup.py 
-if you have added some wrong value
+Kamu Bisa run setup.py 
+Jika terjadi error
 """
 re="\033[1;31m"
 gr="\033[1;32m"
@@ -15,25 +15,25 @@ import time
 def banner():
 	os.system('clear')
 	print(f"""
-	{re}╔═╗{cy}┌─┐┌┬┐┬ ┬┌─┐
-	{re}╚═╗{cy}├┤  │ │ │├─┘
-	{re}╚═╝{cy}└─┘ ┴ └─┘┴
-	Recoded By Raghav
-	THIS IS 1ST INSTANCE
+	{re}P{cy}S     N
+	{re}A{cy} T   E
+	{re}K{cy}  E-V
+	
+	
 	
 	""")
 
 def requirements():
 	def csv_lib():
 		banner()
-		print(gr+'['+cy+'+'+gr+']'+cy+' this may take some time ...')
+		print(gr+'['+cy+'+'+gr+']'+cy+' silahkan tunggu bossku...')
 		os.system("""
 			pip3 install cython numpy pandas
 			python3 -m pip install cython numpy pandas
 			""")
 	banner()
-	print(gr+'['+cy+'+'+gr+']'+cy+' it will take upto 10 min to install csv merge.')
-	input_csv = input(gr+'['+cy+'+'+gr+']'+cy+' do you want to enable csv merge (y/n): ').lower()
+	print(gr+'['+cy+'+'+gr+']'+cy+' proses ini membutuhkan waktu beberapa menit..')
+	input_csv = input(gr+'['+cy+'+'+gr+']'+cy+' Pilih y (y/n): ').lower()
 	if input_csv == "y":
 		csv_lib()
 	else:
